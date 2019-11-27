@@ -3,14 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
+#include "CharacterBase.h"
 #include "BehaviourTreeCharacter.generated.h"
 
 UCLASS(config=Game)
-class ABehaviourTreeCharacter : public ACharacter
+class ABehaviourTreeCharacter : public ACharacterBase
 {
 	GENERATED_BODY()
 
+private:
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
